@@ -1,0 +1,10 @@
+b906df20bc740c9c86ffb8f3816b1483 *DESCRIPTION
+3b11694a4cc1366b83d897f4b75c51eb *NAMESPACE
+4db9e6be918cdce2cb7c538a75091d13 *R/squeezy.R
+c19a84f4e6b6c2c1d4f11c91fc393ca1 *build/partial.rdb
+2f4ed7c16c2969e99bf105e29ceca5ed *man/dminML.LA.ridgeGLM.Rd
+ad44a4a49e2f7af1c9e60bcc78f33923 *man/mAIC.LA.ridgeGLM.Rd
+55be4677706a4afcfc07222db648a1ee *man/minML.LA.ridgeGLM.Rd
+a987cc68b3117253d08af93bce59c478 *man/normalityCheckQQ.Rd
+258b1e9d5b4494f46b9b8aa66deeadfa *man/squeezy-package.Rd
+e172edc0864c18adc3dee7ba570ee39a *man/squeezy.Rd
