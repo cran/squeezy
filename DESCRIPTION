@@ -1,8 +1,8 @@
 Package: squeezy
 Type: Package
 Title: Group-Adaptive Elastic Net Penalised Generalised Linear Models
-Version: 1.0
-Date: 2021-06-07
+Version: 1.1
+Date: 2022-03-22
 Authors@R: c(person(c("Mirrelijn","M."), "van Nee", role = c("aut", "cre"),
                      email = "m.vannee@amsterdamumc.nl"),
               person("Tim", "van de Brug", role = "aut"),
@@ -21,6 +21,6 @@ Description: Fit linear and logistic regression models penalised with group-adap
 License: GPL (>= 3)
 URL: https://arxiv.org/abs/2101.03875
 NeedsCompilation: no
-Packaged: 2021-07-06 13:04:08 UTC; VNOB-0728
+Packaged: 2022-03-22 14:16:59 UTC; VNOB-0728
 Repository: CRAN
-Date/Publication: 2021-07-07 08:20:06 UTC
+Date/Publication: 2022-03-22 14:50:02 UTC

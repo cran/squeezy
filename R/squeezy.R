@@ -209,8 +209,8 @@ squeezy <- function(Y,X,groupset,alpha=1,model=NULL,
   #datablocks <- groupxtnd (or groupset if no overlapping groups)
   
   #datablocks: list with each element a data type containing indices of covariates with that data type 
-  Xbl <- createXblocks(lapply(groupxtnd,function(ind) Xxtnd[,ind]))
-  XXbl <- createXXblocks(lapply(groupxtnd,function(ind) Xxtnd[,ind]))
+  Xbl <- createXblocks(lapply(groupxtnd,function(ind) Xxtnd[,ind,drop=FALSE]))
+  XXbl <- createXXblocks(lapply(groupxtnd,function(ind) Xxtnd[,ind,drop=FALSE]))
   
   #Find global lambda if not given for initial penalty and/or for AIC comparison----
   if(is.null(lambdaglobal)){
@@ -1076,6 +1076,7 @@ normalityCheckQQ <- function(X,groupset,fit.squeezy,nSim=500){
         #simulate betas
         tausLatent <- .rtgamma(p,shape = shape, scale= scale, a=a, b=b)
         varsBeta <- sigmahat*(tausLatent-1)/lam2/tausLatent
+        varsBeta[tausLatent==Inf] <- sigmahat/lam2[tausLatent==Inf]
         betas <- rnorm(p,mean=0,sd=sqrt(varsBeta)) 
         
         #compute linear predictor eta
@@ -1269,10 +1270,11 @@ normalityCheckQQ <- function(X,groupset,fit.squeezy,nSim=500){
     Fb <- pgamma(b, shape, scale = scale)
     y <- (1 - x) * Fa + x * Fb
     if(sum(output==Inf)!=length(y)) browser()
-    output[output==Inf] <- qgamma(y, shape, scale = scale)
+    temp <- qgamma(y, shape, scale = scale)
+    output[output==Inf] <- temp
     It <- It + 1
-    if(length(shape)>1) shape <- shape[output==Inf]
-    if(length(scale)>1) scale <- scale[output==Inf]
+    if(length(shape)>1) shape <- shape[temp==Inf]
+    if(length(scale)>1) scale <- scale[temp==Inf]
     n <- sum(output==Inf)
   }
   return(output)
