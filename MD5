@@ -1,7 +1,7 @@
-6525d9f16ab49ef060098ff0a5a3fc2b *DESCRIPTION
+a9452ad9fb7767db04fc7c873bd164d8 *DESCRIPTION
 3b11694a4cc1366b83d897f4b75c51eb *NAMESPACE
-4933d4ae3cc4e7225a20fe4b8ff33b23 *R/squeezy.R
-d92cfc659833d81bee02c91ad1da63d1 *build/partial.rdb
+dda56ae44428099f99e26c08f2dcc0b5 *R/squeezy.R
+02637d22925f68a02d8edfefc01d02da *build/partial.rdb
 2f4ed7c16c2969e99bf105e29ceca5ed *man/dminML.LA.ridgeGLM.Rd
 ad44a4a49e2f7af1c9e60bcc78f33923 *man/mAIC.LA.ridgeGLM.Rd
 55be4677706a4afcfc07222db648a1ee *man/minML.LA.ridgeGLM.Rd

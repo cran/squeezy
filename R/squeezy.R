@@ -24,9 +24,10 @@ squeezy <- function(Y,X,groupset,alpha=1,model=NULL,
   #selectAIC: TRUE/FALSE to compare AIC of multiridge model and ordinary ridge model. Return best one.
   
   #Set-up variables ---------------------------------------------------------------------------
-  groupsets <- list(groupset)
   n <- dim(X)[1] #number of samples
   p <- dim(X)[2] #number of covariates 
+  if(length(lambdas)==p && missing(groupset)) groupset <- lapply(1:p, function(x) x)
+  groupsets <- list(groupset)
   if(!is.null(X2)) n2<-dim(X2)[1] #number of samples in independent data set x2 if given
   
   if(is.null(model)){
